@@ -5,9 +5,8 @@ export default Styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'stretch',
-        padding: 10,
         marginTop: Constants.statusBarHeight + 10,
-        margin: 10
+        margin: 8
     },
     header: {
         margin: 10,
@@ -32,12 +31,14 @@ export default Styles = StyleSheet.create({
     radioButton: {
         flexDirection: 'row',
         alignItems: 'center',
-        marginTop: 10
+        marginTop: 10,
+        marginLeft: 10
     },
     title: {
         fontSize: 20,
         margin: 5,
-        marginTop: 20
+        marginTop: 20,
+        marginLeft: 10
     },
     modal: {
         justifyContent: 'stretch',

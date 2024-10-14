@@ -56,14 +56,11 @@ export default function AddWorkout() {
         // Jos on virheitä, lopeta funktio tähän
         if (hasError) return
 
-        // Luo sekunnin tarkkuudella oleva aikaleima
-        const timestamp = new Date().getTime()
-
         // Muunna etäisyys mailista kilometreiksi, jos yksikkö on mailit
         const finalDistance = unit === 'Miles' ? distanceValue * 1.60934 : distanceValue
 
         // Lisää uusi harjoitus
-        const modified = [...workout, { sport, distance: finalDistance, duration: durationValue, day, unit, timestamp }]
+        const modified = [...workout, { sport, distance: finalDistance, duration: durationValue, day, unit }]
         setWorkout(modified)
         setVisible(true)
 

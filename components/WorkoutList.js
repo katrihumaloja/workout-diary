@@ -33,12 +33,13 @@ export default function WorkoutList() {
             <FlatList
                 data={workout}
                 renderItem={({ item }) => <Item item={item} unit={unit} />}
-                keyExtractor={item => item.day + item.timestamp + item.distance}
+                keyExtractor={item => item.day + item.sport}
             />
         </SafeAreaView>
     )
 }
 
+// Komponentti harjoituksen näyttämiseen
 function Item({ item, unit }) {
     const distanceInKm = Number(item.distance)
     const displayedDistance = unit === 'Miles'
@@ -58,6 +59,7 @@ function Item({ item, unit }) {
     )
 }
 
+// Komponentti eri urheilulajien matkojen yhteenvedolle
 function SportsSummary({ totalDistances, unit }) {
     return (
         <View style={Styles.sportsSummary}>

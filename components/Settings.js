@@ -25,6 +25,7 @@ export default function Settings() {
     )
 }
 
+// Komponentti radiobuttoneiden näyttämiseen
 function RadioSelection({ value, text }) {
     return (
         <View style={Styles.radioButton}>
